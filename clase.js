@@ -31,3 +31,17 @@ const mensaje = () =>{
 console.log(mensaje());
 console.log(multiplicacionTres(1));
 console.log(resta(5,4));
+//arreglo
+let numero = [1,2,3,4,5,6];
+//ingresar un dato adicional al final del arreglo
+numero.push(10);
+//saca el ultimo elemento
+numero.pop();
+//funcion que recibe un arreglo y elimina o agrega un dato
+const eliminarUltimo = arreglo =>{
+    arreglo.pop();
+}
+let vector = [9,8,7,6,5,4,3,2,1];
+console.log('Numero de elementos antes de eliminar: '+vector.length);
+eliminarUltimo(vector);
+console.log('Numero de elementos despues de eliminar: '+vector.length);
