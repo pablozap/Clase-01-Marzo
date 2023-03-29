@@ -1,9 +1,3 @@
-//export default, significa que por defecto exporta la funcion, dispomible para usarse en otra parte
-export const nombre = 'Juan Perez';
-export const suma= (numero1, numero2) =>{
-    return numero1+numero2;
-}
-//Se soluciona Error CORS instalando extemsions Live server y luego ejecutando el archivo html con esa extension
 /*Crear minimo 2 modulos:
     El primer modulo debe tener una clase que hereda de otra
     un objeto que dentro de sus propiedades tenga otro objeto.
@@ -16,3 +10,10 @@ Oros adicionales:
  dee tener como parametros de entrada el arreglo y una callbackFunction 
  debe poderse exportar
 */
+import {Carro, objeto} from './moduleOne.js';
+let ferrari = new Carro(4, 'Terrestre', 4, '2000');
+const funcion = (clase, object) => {
+    console.log(clase);
+    console.log(object.multiplicar());
+}
+funcion(ferrari, objeto);
