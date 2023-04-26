@@ -1,14 +1,24 @@
-import logo from './logo.svg';
+import {logo} from './logo.svg';
 import {Footer} from './componentes/footer';
+import {Contador}  from "./componentes/Contador";
 import './App.css';
-import Contador  from "./componentes/Contador";
+import { NavBar } from "./componentes/NavBar";
+import {BrowserRouter as Router, Route, Routes} from 'react-router-dom';
+import { Empresa } from './pages/Empresa';
+import { Contacto } from './pages/Contacto';
+import { Conocenos } from './pages/Conocenos';
+
 function App() {
-  return (
+  return (  
     <div className="App">
-      
-      <h1>Hello</h1>
-      
-      <Contador nombre = "Juan" edad = "30" activo = "true"/>
+      <Router>
+        <NavBar/>
+        <Routes>
+          <Route path='/Empresa' element={<Empresa/>}/>
+          <Route path='/Contacto' element={<Contacto/>}/>
+          <Route path='/Conocenos' element={<Conocenos/>}/>
+        </Routes>
+      </Router>
     </div>
     
   );
